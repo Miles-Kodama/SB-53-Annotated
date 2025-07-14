@@ -11,6 +11,7 @@ Usage:
 import re
 import sys
 from pathlib import Path
+import uuid
 
 def parse_markdown(content):
     """Parse the markdown content and extract structure."""
@@ -72,14 +73,7 @@ def process_annotations(text):
     text = re.sub(r'_(.*?)_', r'<em>\1</em>', text)
     text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
     
-    # Convert standard markdown links to HTML links (but not in annotations)
-    text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank">\1</a>', text)
-    
-    # Convert markdown headings (###) to <h3>
-    text = re.sub(r'^###\s+(.*)$', r'<h3>\1</h3>', text, flags=re.MULTILINE)
-    
     # Pattern to match [annotated text]{annotation content}
-    # The pattern needs to be improved to handle nested braces
     pattern = r'\[([^\]]+)\]\{([^}]+(?:\{[^}]*\}[^}]*)*)\}'
     
     def replace_annotation(match):
@@ -92,27 +86,34 @@ def process_annotations(text):
             header = lines[0][:-1]  # Remove the colon
             body = lines[1].strip() if len(lines) > 1 else ""
         else:
-            # Use a generic header
             header = "Note"
             body = annotation_content
         
-        # Process links in the annotation body
+        # Process markdown in the body content
         body = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank">\1</a>', body)
         
-        # Build HTML
-        html = f'<span class="annotated">{annotated_text}</span>'
-        html += f'<span class="annotation-inline">'
+        # Create a unique ID for this annotation
+        annotation_id = f"annotation_{uuid.uuid4().hex[:8]}"
+        
+        # Build HTML with the annotation content in a hidden div (no extra spacing)
+        html = f'<span class="annotated" data-annotation-id="{annotation_id}">{annotated_text}</span>'
+        html += f'<div id="{annotation_id}" class="annotation-content">'
         html += f'<div class="annotation-header">{header}</div>'
-        html += f'{body}'
-        html += f'</span>'
+        html += f'<div class="annotation-body">{body}</div>'
+        html += f'</div>'
         
         return html
     
     # Process all annotations
     processed = re.sub(pattern, replace_annotation, text)
     
+    # Now convert regular markdown links (after processing annotations)
+    processed = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank">\1</a>', processed)
+    
+    # Convert markdown headings (###) to <h3>
+    processed = re.sub(r'^###\s+(.*)$', r'<h3>\1</h3>', processed, flags=re.MULTILINE)
+    
     # Convert line breaks to <br> tags within paragraphs
-    # But first mark real paragraphs
     processed = re.sub(r'\n\n', '<!--PARA-->', processed)
     processed = re.sub(r'\n', '<br>', processed)
     processed = re.sub(r'<!--PARA-->', '\n\n', processed)
@@ -122,6 +123,7 @@ def process_annotations(text):
 def generate_html(parsed_data):
     """Generate the complete HTML document."""
     
+    # Double the curly braces in the template to escape them for Python's string formatting
     html_template = '''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -188,8 +190,8 @@ def generate_html(parsed_data):
             color: white;
         }}
         
-        .annotation-inline {{
-            display: block;
+        .annotation-content {{
+            display: none;
             margin: 0.5rem 0 0.5rem 2rem;
             padding: 1rem;
             background-color: #f5f5f5;
@@ -197,16 +199,10 @@ def generate_html(parsed_data):
             font-size: 0.9em;
             line-height: 1.6;
             border-radius: 0 4px 4px 0;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
         }}
         
-        .annotation-inline.show {{
-            max-height: 500px;
-            opacity: 1;
-            margin: 0.5rem 0 0.5rem 2rem;
+        .annotation-content.show {{
+            display: block;
         }}
         
         .annotation-header {{
@@ -252,19 +248,22 @@ def generate_html(parsed_data):
             element.addEventListener('click', function(e) {{
                 e.stopPropagation();
                 
-                // Find the annotation that follows this element
-                const annotation = this.nextElementSibling;
+                // Get the annotation ID from the data attribute
+                const annotationId = this.getAttribute('data-annotation-id');
+                const annotation = document.getElementById(annotationId);
                 
-                if (annotation && annotation.classList.contains('annotation-inline')) {{
-                    // Toggle the annotation
+                if (annotation) {{
+                    // Toggle visibility with class for styling
                     annotation.classList.toggle('show');
                     this.classList.toggle('expanded');
                     
                     // Close other annotations
-                    document.querySelectorAll('.annotation-inline.show').forEach(other => {{
-                        if (other !== annotation) {{
+                    document.querySelectorAll('.annotation-content.show').forEach(other => {{
+                        if (other.id !== annotationId) {{
                             other.classList.remove('show');
-                            other.previousElementSibling.classList.remove('expanded');
+                            // Find and remove expanded class from the triggering element
+                            const otherTrigger = document.querySelector('[data-annotation-id="' + other.id + '"]');
+                            if (otherTrigger) otherTrigger.classList.remove('expanded');
                         }}
                     }});
                 }}
@@ -273,9 +272,10 @@ def generate_html(parsed_data):
         
         // Click anywhere else to close annotations
         document.addEventListener('click', function() {{
-            document.querySelectorAll('.annotation-inline.show').forEach(annotation => {{
+            document.querySelectorAll('.annotation-content.show').forEach(annotation => {{
                 annotation.classList.remove('show');
-                annotation.previousElementSibling.classList.remove('expanded');
+                const trigger = document.querySelector('[data-annotation-id="' + annotation.id + '"]');
+                if (trigger) trigger.classList.remove('expanded');
             }});
         }});
     </script>
