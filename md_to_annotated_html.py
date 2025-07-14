@@ -68,8 +68,18 @@ def parse_markdown(content):
 def process_annotations(text):
     """Convert markdown annotation syntax to HTML."""
     
+    # Convert markdown italicized text (_text_ or *text*) to <em>text</em>
+    text = re.sub(r'_(.*?)_', r'<em>\1</em>', text)
+    text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
+    
+    # Convert standard markdown links to HTML links (but not in annotations)
+    text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank">\1</a>', text)
+    
+    # Convert markdown headings (###) to <h3>
+    text = re.sub(r'^###\s+(.*)$', r'<h3>\1</h3>', text, flags=re.MULTILINE)
+    
     # Pattern to match [annotated text]{annotation content}
-    # This handles multi-line annotations and nested brackets
+    # The pattern needs to be improved to handle nested braces
     pattern = r'\[([^\]]+)\]\{([^}]+(?:\{[^}]*\}[^}]*)*)\}'
     
     def replace_annotation(match):
@@ -82,10 +92,12 @@ def process_annotations(text):
             header = lines[0][:-1]  # Remove the colon
             body = lines[1].strip() if len(lines) > 1 else ""
         else:
-            # Use first few words as header if no explicit header
-            words = annotation_content.split()
-            header = ' '.join(words[:3]) + '...' if len(words) > 3 else annotation_content
+            # Use a generic header
+            header = "Note"
             body = annotation_content
+        
+        # Process links in the annotation body
+        body = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2" target="_blank">\1</a>', body)
         
         # Build HTML
         html = f'<span class="annotated">{annotated_text}</span>'
