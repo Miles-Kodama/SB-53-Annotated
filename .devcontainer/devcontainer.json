@@ -1,0 +1,47 @@
+{
+    "name": "Annotated Bill Editor",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    
+    // Features to add to the dev container
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    
+    // Use 'forwardPorts' to make a list of ports inside the container available locally
+    "forwardPorts": [8000],
+    "portsAttributes": {
+        "8000": {
+            "label": "Live Preview",
+            "onAutoForward": "openBrowser"
+        }
+    },
+    
+    // Use 'postCreateCommand' to run commands after the container is created
+    "postCreateCommand": "pip install --upgrade pip",
+    
+    // Configure tool-specific properties
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "yzhang.markdown-all-in-one",
+                "bierner.markdown-preview-github-styles",
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "files.autoSave": "afterDelay",
+                "files.autoSaveDelay": 1000
+            }
+        }
+    },
+    
+    // Uncomment to connect as root instead
+    // "remoteUser": "root"
+    
+    "remoteUser": "vscode"
+}

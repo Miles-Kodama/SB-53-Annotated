@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Senate Bill 53</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        
+        .bill-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-heading {
+            font-size: 1.1em;
+            margin-bottom: 1rem;
+            color: #333;
+            font-weight: normal;
+        }
+        
+        .section-number {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .annotated {
+            position: relative;
+            background-color: #e3f2fd;
+            padding: 2px 4px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            border-bottom: 2px dotted #1976d2;
+        }
+        
+        .annotated:hover {
+            background-color: #bbdefb;
+        }
+        
+        .annotated.expanded {
+            background-color: #1976d2;
+            color: white;
+        }
+        
+        .annotation-inline {
+            display: block;
+            margin: 0.5rem 0 0.5rem 2rem;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-left: 4px solid #1976d2;
+            font-size: 0.9em;
+            line-height: 1.6;
+            border-radius: 0 4px 4px 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .annotation-inline.show {
+            max-height: 500px;
+            opacity: 1;
+            margin: 0.5rem 0 0.5rem 2rem;
+        }
+        
+        .annotation-header {
+            font-weight: bold;
+            color: #1976d2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .instructions {
+            background-color: #fff3cd;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            font-size: 0.9em;
+            text-align: center;
+            color: #856404;
+        }
+        
+        /* Small indicator for annotated text */
+        .annotated::after {
+            content: "↓";
+            font-size: 0.7em;
+            margin-left: 2px;
+            opacity: 0.6;
+        }
+        
+        .annotated.expanded::after {
+            content: "↑";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>California Senate Bill 53</h1>
+        
+        <div class="instructions">This document is an annotated version of SB 53</div>
+        
+        <div class="bill-section">
+<h2 class="section-heading"><span class="section-number">_SECTION 1._</span></h2>
+<p>The Legislature finds and declares all of the following:</p>
+<p>(a) California is leading the world in artificial intelligence innovation and research through companies large and small and through the state’s remarkable public and private universities.</p>
+<p>(b) Artificial intelligence, including new advances in foundation models, has the potential to catalyze innovation and the rapid development of a wide range of benefits for Californians and the California economy, including advances in medicine, wildfire forecasting and prevention, and climate science, and to push the bounds of human creativity and capacity.</p>
+<p>(c) The Joint California Policy Working Group on AI Frontier Models has recommended sound principles for policy in artificial intelligence.</p>
+<p>(d) Targeted interventions to support effective artificial intelligence governance should balance the technology’s benefits and material risks.</p>
+<p>(e) Artificial intelligence developers have already voluntarily committed to creating safety and security protocols and releasing the results of risk assessments.</p>
+<p>(f) In building a robust and transparent evidence environment, policymakers can align incentives to simultaneously protect consumers, leverage industry expertise, and recognize leading safety practices.</p>
+<p>(g) When industry actors conduct internal research on their technologies’ impacts, a significant information asymmetry can develop between those with privileged access to data and the broader public.</p>
+<p>(h) Greater transparency, given current information deficits, can advance accountability, competition, and public trust.</p>
+<p>(i) Whistleblower protections and public-facing information sharing are key instruments to increase transparency.</p>
+<p>(j) Adverse event reporting systems enable monitoring of the post-deployment impacts of artificial intelligence.</p>
+<p>(k) There is growing evidence that, unless they are developed with careful diligence and reasonable precaution, advanced artificial intelligence systems could pose catastrophic risks from both malicious uses and malfunctions, including artificial intelligence-enabled hacking, biological attacks, and loss of control.</p>
+<p>(l) With the frontier of artificial intelligence rapidly evolving, there is a need for legislation to track the frontier of artificial intelligence research and alert policymakers and the public to the risks and harms from the very most advanced artificial intelligence systems, while avoiding burdening smaller companies behind the frontier.</p>
+<p>(m) A computational threshold of 10^26 floating point operations captures the current frontier of foundation model development and captures only highly resourced developers spending hundreds of millions of dollars to develop foundation models.</p>
+<p>(n) In the future, foundation models developed by smaller companies or that are behind the frontier may pose significant catastrophic risk, and additional legislation may be needed at that time.</p>
+<p>(o) It is the intent of the Legislature to create more transparency, but collective safety will depend in part on large developers taking due care in their development and deployment of foundation models proportional to the scale of the foreseeable risks.</p>
+</div>
+<div class="bill-section">
+<h2 class="section-heading"><span class="section-number">_SEC. 2._</span></h2>
+<p>Chapter 25.1 (commencing with Section 22757.10) is added to Division 8 of the Business and Professions Code, to read:</p>
+<p>### CHAPTER  25.1. Transparency in Frontier Artificial Intelligence Act</p>
+<p>### 22757.10.</p>
+<p>This chapter shall be known as the Transparency in Frontier Artificial Intelligence Act.</p>
+<p>### 22757.11.</p>
+<p> For purposes of this chapter:</p>
+<p>(a) “<span class="annotated">Artificial intelligence model</span><span class="annotation-inline"><div class="annotation-header">The definition that...</div>The definition that follows is a close paraphrase of the [OECD's definition](https://www.oecd.org/en/publications/explanatory-memorandum-on-the-updated-oecd-definition-of-an-ai-system_623da898-en.html) of an AI system, published in March 2024.</span>” means an engineered or machine-based system that varies in its level of autonomy and that can, for explicit or implicit objectives, infer from the input it receives how to generate outputs that can influence physical or virtual environments.</p>
+<p>(b) “Catastrophic risk” means a foreseeable and material risk that a large developer’s development, storage, use, or deployment of a foundation model will materially contribute to the death of, or serious injury to, more than 100 people or more than one billion dollars ($1,000,000,000) in damage to rights in money or property arising from a single incident, scheme, or course of conduct involving a dangerous capability.</p>
+<p>(c) “Critical safety incident” means any of the following:</p>
+<p>(1) Unauthorized access to, modification of, or exfiltration of, the model weights of a foundation model.</p>
+<p>(2) Harm resulting from the materialization of a catastrophic risk.</p>
+<p>(3) Loss of control of a foundation model causing death, bodily injury, or damage to rights in money or property.</p>
+<p>(4) A foundation model that uses deceptive techniques against the large developer to subvert the controls or monitoring of its large developer outside of the context of an evaluation designed to elicit this behavior.</p>
+<p>(d) “Dangerous capability” means the capacity of a foundation model to do any of the following:</p>
+<p>(1) Provide expert-level assistance in the creation or release of a chemical, biological, radiological, or nuclear weapon.</p>
+<p>(2) Conduct or assist in a cyberattack.</p>
+<p>(3) Engage in conduct, with limited human intervention, that would, if committed by a human, constitute the crime of extortion, theft, including theft by deception, or a serious or violent felony.</p>
+<p>(4) Evade the control of its large developer or user.</p>
+<p>(e) (1) “Deploy” means to make a foundation model available to a third party for use, modification, copying, or combination with other software.</p>
+<p>(2) “Deploy” does not include making a foundation model available to a third party for the primary purpose of developing or evaluating the foundation model.</p>
+<p>(f) “Large developer” means either of the following:</p>
+<p>(1) (A) Before January 1, 2027, “large developer” means a person who has trained, or initiated the training of, at least one foundation model using a quantity of computing power greater than 10^26 integer or floating-point operations.</p>
+<p>(B) The quantity of computing power described in subparagraph (A) shall include computing for the original training run and any subsequent fine-tuning, reinforcement learning, or other material modifications to a preceding foundation model.</p>
+<p>(2) (A) Except as provided in subparagraph (B), on and after January 1, 2027, “large developer” has the meaning defined by a regulation adopted by the Attorney General pursuant to Section 22757.15.</p>
+<p>(B) If the Attorney General does not adopt a regulation described in subparagraph (A) by January 1, 2027, the definition in paragraph (1) shall be operative until the regulation is adopted.</p>
+<p>(g) “Foundation model” means an artificial intelligence model that is all of the following:</p>
+<p>(1) Trained on a broad data set.</p>
+<p>(2) Designed for generality of output.</p>
+<p>(3) Adaptable to a wide range of distinctive tasks.</p>
+<p>(h) “Model weight” means a numerical parameter in a foundation model that is adjusted through training and that helps determine how inputs are transformed into outputs.</p>
+<p>(i) “Safety and security protocol” means documented technical and organizational protocols to manage, assess, and mitigate catastrophic risks.</p>
+<p>### 22757.12.</p>
+<p> (a) A large developer shall write, implement, and clearly and conspicuously publish on its internet website a safety and security protocol that describes in specific detail all of the following:</p>
+<p>(1) How, if at all, the large developer excludes certain foundation models from being covered by its safety and security protocol because those foundation models do not pose material catastrophic risks.</p>
+<p>(2) The testing procedures that the large developer uses to assess catastrophic risks from its foundation models, including risk resulting from malfunctions, misuse, and foundation models evading the control of the large developer or user.</p>
+<p>(3) The mitigations that a large developer takes to reduce a catastrophic risk and how the large developer assesses the effectiveness of those mitigations.</p>
+<p>(4) The degree to which the large developer’s assessments of catastrophic risk and the effectiveness of catastrophic risk mitigations are reproducible by external entities.</p>
+<p>(5) The extent to which, and how, a large developer will use third parties to assess catastrophic risks and the effectiveness of mitigations of catastrophic risk.</p>
+<p>(6) The large developer’s cybersecurity practices and how the large developer secures unreleased model weights from unauthorized modification or transfer by internal or external parties.</p>
+<p>(7) To the extent that the foundation model is controlled by the large developer, the procedures the large developer will use to monitor critical safety incidents and the steps that a large developer would take to respond to a critical safety incident, including, but not limited to, who the large developer will notify and the timeline on which the large developer would take these steps.</p>
+<p>(8) The testing procedures that the large developer will use to assess and manage a catastrophic risk resulting from the internal use of its foundation models, including risks resulting from a foundation model circumventing oversight mechanisms, and the schedule, specified in days, by which the large developer will report these assessments pursuant to subdivision (d).</p>
+<p>(9) How the developer determines when its foundation models are substantially modified enough to conduct additional assessments and publish a transparency report pursuant to subdivision (c).</p>
+<p>(b) If a large developer makes a material modification to its safety and security protocol, the large developer shall clearly and conspicuously publish the modified protocol and a justification for that modification within 30 days.</p>
+<p>(c) Before or concurrently with deploying a new foundation model or a substantially modified version of an existing foundation model, a large developer shall clearly and conspicuously publish on its internet website a transparency report containing all of the following:</p>
+<p>(1) The results of any risk assessment, the steps taken to address any identified risks, and the results of any risk mitigation assessment conducted by the large developer pursuant to its safety and security protocol.</p>
+<p>(2) (A) The results of any risk assessment, the steps taken to address any identified risks, and the results of any risk mitigation assessment conducted pursuant to a large developer’s safety and security protocol that is conducted by a third party that contracts with a large developer.</p>
+<p>(B) A large developer shall disclose the time and extent of predeployment access provided to any third party described in subparagraph (A), whether or not the third party was independent, and the nature of any constraints the large developer placed on the assessment or on the third party’s ability to disclose information about its assessment to the public or to government officials.</p>
+<p>(3) (A) If the deployment would pose a catastrophic risk, the reasoning behind the large developer’s decision to deploy the foundation model, the process by which the large developer arrived at that decision, and any limitations in the assessments that the large developer used to make that decision.</p>
+<p>(B) A large developer may reuse an answer previously provided under subparagraph (A) if the rationale in question has not materially changed for the new deployment.</p>
+<p>(d) A large developer shall clearly and conspicuously publish on its internet website any assessment of catastrophic risk resulting from internal use of its foundation models pursuant to the schedule the developer specifies in its safety and security protocol.</p>
+<p>(e) A large developer shall not make a materially false or misleading statement about catastrophic risk from its foundation models or its management of catastrophic risk.</p>
+<p>(f) (1) When a large developer publishes documents to comply with this section, the large developer may make redactions to those documents that are necessary to protect the large developer’s trade secrets, the large developer’s cybersecurity, public safety, or the national security of the United States or to comply with any federal or state law.</p>
+<p>(2) If a large developer redacts information in a document pursuant to this subdivision, the large developer shall describe the character and justification of the redaction in any published version of the document to the extent permitted by the concerns that justify redaction and shall retain the unredacted information for five years.</p>
+<p>### 22757.13.</p>
+<p> (a) The Attorney General shall establish a mechanism to be used by a large developer or a member of the public to report a critical safety incident that includes all of the following:</p>
+<p>(1) The date of the critical safety incident.</p>
+<p>(2) The reasons the incident qualifies as a critical safety incident.</p>
+<p>(3) A short and plain statement describing the critical safety incident.</p>
+<p>(b) A large developer shall report any critical safety incident pertaining to one or more of its foundation models to the Attorney General within 15 days of discovering the critical safety incident.</p>
+<p>(c) The Attorney General shall review critical safety incident reports submitted by large developers and may review reports submitted by members of the public.</p>
+<p>### 22757.14.</p>
+<p> (a) A violation of this chapter shall be subject to a civil penalty in an amount not to exceed  dollars ($) per violation, unless the violation is willful or reckless, in which case the civil penalty shall be in an amount not to exceed  dollars ($).</p>
+<p>(b) The civil penalty shall be assessed in a civil action brought only by the Attorney General.</p>
+<p>### 22757.15.</p>
+<p> (a) On or before January 1, 2027, and annually thereafter, the Attorney General may adopt regulations to update the definition of a “large developer” for the purposes of this chapter to ensure that it accurately reflects technological developments, scientific literature, and widely accepted national and international standards and applies to well-resourced large developers at the frontier of artificial intelligence development.</p>
+<p>(b) In developing regulations pursuant to this section, the Attorney General shall take into account all of the following:</p>
+<p>(1) Similar thresholds used in international standards or federal law, guidance, or regulations for the management of catastrophic risk.</p>
+<p>(2) Input from stakeholders, including academics, industry, the open-source community, and governmental entities.</p>
+<p>(3) The extent to which a person will be able to determine, before beginning to train or deploy a foundation model, whether that person will be subject to the regulations as a large developer with an aim toward allowing earlier determinations if possible.</p>
+<p>(4) The complexity of determining whether a person is covered, with an aim toward allowing simpler determinations if possible.</p>
+<p>(5) The external verifiability of determining whether a person is covered, with an aim toward definitions that are verifiable by parties other than the large developer.</p>
+<p>(c) If the Attorney General determines that less well-resourced developers, or developers significantly behind the frontier of artificial intelligence, may create substantial catastrophic risk, the Attorney General shall promptly submit a report to the Legislature, pursuant to Section 9795, with a proposal for managing this source of catastrophic risk but shall not include those developers within the definition of “large developer” without authorization in subsequently enacted legislation.</p>
+</div>
+
+    </div>
+    
+    <script>
+        document.querySelectorAll('.annotated').forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // Find the annotation that follows this element
+                const annotation = this.nextElementSibling;
+                
+                if (annotation && annotation.classList.contains('annotation-inline')) {
+                    // Toggle the annotation
+                    annotation.classList.toggle('show');
+                    this.classList.toggle('expanded');
+                    
+                    // Close other annotations
+                    document.querySelectorAll('.annotation-inline.show').forEach(other => {
+                        if (other !== annotation) {
+                            other.classList.remove('show');
+                            other.previousElementSibling.classList.remove('expanded');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Click anywhere else to close annotations
+        document.addEventListener('click', function() {
+            document.querySelectorAll('.annotation-inline.show').forEach(annotation => {
+                annotation.classList.remove('show');
+                annotation.previousElementSibling.classList.remove('expanded');
+            });
+        });
+    </script>
+</body>
+</html>
