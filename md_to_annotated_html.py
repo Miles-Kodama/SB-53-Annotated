@@ -73,6 +73,9 @@ def process_annotations(text):
     text = re.sub(r'_(.*?)_', r'<em>\1</em>', text)
     text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
     
+    # Store annotations to be placed at paragraph end
+    paragraph_annotations = []
+    
     # Pattern to match [annotated text]{annotation content}
     pattern = r'\[([^\]]+)\]\{([^}]+(?:\{[^}]*\}[^}]*)*)\}'
     
@@ -95,13 +98,15 @@ def process_annotations(text):
         # Create a unique ID for this annotation
         annotation_id = f"annotation_{uuid.uuid4().hex[:8]}"
         
-        # Build HTML with the annotation content in a hidden div (no extra spacing)
-        html = f'<span class="annotated" data-annotation-id="{annotation_id}">{annotated_text}</span>'
-        html += f'<div id="{annotation_id}" class="annotation-content">'
-        html += f'<div class="annotation-header">{header}</div>'
-        html += f'<div class="annotation-body">{body}</div>'
-        html += f'</div>'
+        # Add to list of annotations for this paragraph
+        annotation_html = f'<div id="{annotation_id}" class="annotation-content">'
+        annotation_html += f'<div class="annotation-header">{header}</div>'
+        annotation_html += f'<div class="annotation-body">{body}</div>'
+        annotation_html += f'</div>'
+        paragraph_annotations.append(annotation_html)
         
+        # Return only the highlighted text with its data attribute
+        html = f'<span class="annotated" data-annotation-id="{annotation_id}">{annotated_text}</span>'
         return html
     
     # Process all annotations
@@ -112,6 +117,13 @@ def process_annotations(text):
     
     # Convert markdown headings (###) to <h3>
     processed = re.sub(r'^###\s+(.*)$', r'<h3>\1</h3>', processed, flags=re.MULTILINE)
+    
+    # Add the annotations at the end of the paragraph
+    if paragraph_annotations:
+        processed += '\n<div class="paragraph-annotations">'
+        for annotation in paragraph_annotations:
+            processed += annotation
+        processed += '</div>'
     
     # Convert line breaks to <br> tags within paragraphs
     processed = re.sub(r'\n\n', '<!--PARA-->', processed)
@@ -190,9 +202,15 @@ def generate_html(parsed_data):
             color: white;
         }}
         
+        .paragraph-annotations {{
+            margin-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 1rem;
+        }}
+        
         .annotation-content {{
             display: none;
-            margin: 0.5rem 0 0.5rem 2rem;
+            margin: 0.5rem 0;
             padding: 1rem;
             background-color: #f5f5f5;
             border-left: 4px solid #1976d2;
@@ -232,6 +250,11 @@ def generate_html(parsed_data):
         .annotated.expanded::after {{
             content: "↑";
         }}
+        
+        .annotation-wrapper {{
+            display: inline-block;
+            position: relative;
+        }}
     </style>
 </head>
 <body>
@@ -256,6 +279,18 @@ def generate_html(parsed_data):
                     // Toggle visibility with class for styling
                     annotation.classList.toggle('show');
                     this.classList.toggle('expanded');
+                    
+                    // Scroll to the annotation if it's not in view
+                    if (annotation.classList.contains('show')) {{
+                        const rect = annotation.getBoundingClientRect();
+                        const isInViewport = 
+                            rect.top >= 0 &&
+                            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+                            
+                        if (!isInViewport) {{
+                            annotation.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                        }}
+                    }}
                     
                     // Close other annotations
                     document.querySelectorAll('.annotation-content.show').forEach(other => {{

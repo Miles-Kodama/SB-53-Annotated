@@ -1,7 +1,7 @@
 # California Senate Bill 53
 This document is an annotated version of SB 53
 
-## _SECTION 1._
+## SECTION 1.
 The Legislature finds and declares all of the following:
 
 (a) California is leading the world in artificial intelligence innovation and research through companies large and small and through the state’s remarkable public and private universities.
@@ -34,8 +34,8 @@ The Legislature finds and declares all of the following:
 
 (o) It is the intent of the Legislature to create more transparency, but collective safety will depend in part on large developers taking due care in their development and deployment of foundation models proportional to the scale of the foreseeable risks.
 
-## _SEC. 2._
- Chapter 25.1 (commencing with Section 22757.10) is added to Division 8 of the Business and Professions Code, to read:
+## SECTION 2.
+Chapter 25.1 (commencing with Section 22757.10) is added to Division 8 of the Business and Professions Code, to read:
 
 ### CHAPTER  25.1. Transparency in Frontier Artificial Intelligence Act
 
