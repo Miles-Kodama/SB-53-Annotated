@@ -22,7 +22,8 @@ The Legislature finds and declares all of the following:
 
 (i) Whistleblower protections and public-facing information sharing are key instruments to increase transparency.
 
-(j) [Adverse event reporting systems]{TODO} enable monitoring of the post-deployment impacts of artificial intelligence.
+(j) [Adverse event reporting systems]{Much like the FDA's [Adverse Event Reporting System](https://www.fda.gov/drugs/surveillance/fdas-adverse-event-reporting-system-faers), a database that records adverse symptoms suffered by patients on FDA-approved drugs. FAERS exists to help drug regulators identify rare or long-latency effects of drugs that might not have been detected in pre-market clinical trials.\\
+Similarly, adverse event reporting systems for AI could help AI regulators identify undesirable properties of models that might not have been caught in pre-deployment safety testing.} enable monitoring of the post-deployment impacts of artificial intelligence.
 
 (k) There is growing evidence that, unless they are developed with careful diligence and reasonable precaution, advanced artificial intelligence systems could pose catastrophic risks from both malicious uses and malfunctions, including artificial intelligence-enabled hacking, biological attacks, and loss of control.
 
@@ -31,7 +32,7 @@ The Legislature finds and declares all of the following:
 (m) A computational [threshold of 10^26 floating point operations]{According to [Epoch AI's estimates](https://epoch.ai/data/notable-ai-models), no company had ever published a foundational model above this threshold until early 2025. Since then, only two companies (OpenAI and xAI) have released models that pass the threshold.\\
 President Biden's [Executive Order 14110](https://www.govinfo.gov/content/pkg/FR-2023-11-01/pdf/2023-24283.pdf) also used 10^26 training FLOPs as the threshold for a frontier model. Under EO 14110, any developer training a model above the threshold was required to disclose their safety testing results and security protocols to Federal authorities.} captures the current frontier of foundation model development and captures only highly resourced developers spending hundreds of millions of dollars to develop foundation models.
 
-(n) In the future, foundation models developed by [smaller companies or that are behind the frontier]{TODO} may pose significant catastrophic risk, and additional legislation may be needed at that time.
+(n) In the future, foundation models developed by [smaller companies or that are behind the frontier]{The main reason why companies behind the frontier could eventually pose catastrophic risk is algorithmic progress. Every year, machine learning researchers discover new ways to make their learning algorithms more efficient, allowing them to train a model with a given level of performance using fewer FLOPS than previously would have been needed. Epoch AI have estimated the rate of algorithmic progress for language models, and [they find](https://epoch.ai/blog/algorithmic-progress-in-language-models) that from 2012 to 2023, the FLOPS required to achieve some fixed level of performance halved every eight months. If this trend holds, a model that takes 10^26 FLOPs to train now will take two orders of magnitude fewer FLOPs in five years.} may pose significant catastrophic risk, and additional legislation may be needed at that time.
 
 (o) It is the intent of the Legislature to create more transparency, but collective safety will depend in part on large developers taking due care in their development and deployment of foundation models proportional to the scale of the foreseeable risks.
 
