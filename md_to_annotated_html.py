@@ -68,6 +68,9 @@ def parse_markdown(content):
 
 def process_annotations(text):
     """Convert markdown annotation syntax to HTML."""
+
+    # Convert \\ to create blank lines
+    text = re.sub(r'\\\\', '<br>', text)
     
     # Convert markdown italicized text (_text_ or *text*) to <em>text</em>
     text = re.sub(r'_(.*?)_', r'<em>\1</em>', text)
@@ -100,7 +103,7 @@ def process_annotations(text):
         
         # Add to list of annotations for this paragraph
         annotation_html = f'<div id="{annotation_id}" class="annotation-content">'
-        annotation_html += f'<div class="annotation-header">{header}</div>'
+        #annotation_html += f'<div class="annotation-header">{header}</div>'
         annotation_html += f'<div class="annotation-body">{body}</div>'
         annotation_html += f'</div>'
         paragraph_annotations.append(annotation_html)
