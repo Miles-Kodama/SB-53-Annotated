@@ -207,7 +207,6 @@ def generate_html(parsed_data):
         
         .paragraph-annotations {{
             margin-top: 1rem;
-            border-top: 1px solid #e0e0e0;
             padding-top: 1rem;
         }}
         
@@ -238,7 +237,7 @@ def generate_html(parsed_data):
             border-radius: 4px;
             margin-bottom: 2rem;
             font-size: 0.9em;
-            text-align: center;
+            text-align: left;
             color: #856404;
         }}
         

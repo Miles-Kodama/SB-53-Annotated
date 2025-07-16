@@ -1,5 +1,5 @@
 # California Senate Bill 53
-This document is an annotated version of SB 53
+This site presents the text of Senate Bill 53 enriched with background and commentary. Click on any of the blue highlights to learn more. The bill text presented below was last amended on 8 July, 2025.
 
 ## SECTION 1.
 The Legislature finds and declares all of the following:
@@ -51,7 +51,7 @@ This chapter shall be known as the Transparency in Frontier Artificial Intellige
 
 (a) “[Artificial intelligence model]{This definition is a close paraphrase of the [OECD's definition](https://www.oecd.org/en/publications/explanatory-memorandum-on-the-updated-oecd-definition-of-an-ai-system_623da898-en.html) of an AI system, published in March 2024.}” means an engineered or machine-based system that varies in its level of autonomy and that can, for explicit or implicit objectives, infer from the input it receives how to generate outputs that can influence physical or virtual environments.
 
-(b) “Catastrophic risk” means a foreseeable and material risk that a large developer’s development, storage, use, or deployment of a foundation model will materially contribute to the death of, or serious injury to, more than [100 people]{TODO} or more than [one billion dollars]{TODO} ($1,000,000,000) in damage to rights in money or property arising from a single incident, scheme, or course of conduct involving a dangerous capability.
+(b) “Catastrophic risk” means a foreseeable and material risk that a large developer’s development, storage, use, or deployment of a foundation model will materially contribute to the death of, or serious injury to, more than [100 people]{TODO, summarize threat models.} or more than [one billion dollars]{TODO, summarize threat models} ($1,000,000,000) in damage to rights in money or property arising from a single incident, scheme, or course of conduct involving a dangerous capability.
 
 (c) “Critical safety incident” means any of the following:
 
@@ -61,10 +61,11 @@ This chapter shall be known as the Transparency in Frontier Artificial Intellige
 
 &nbsp;&nbsp;(3) Loss of control of a foundation model causing death, bodily injury, or damage to rights in money or property.
 
-&nbsp;&nbsp;(4) A foundation model that uses [deceptive techniques]{For instance, a model could hide its true desires and motivations from its developers in hopes of protecting those desires from modification. [Greenblatt et al.](https://assets.anthropic.com/m/983c85a201a962f/original/Alignment-Faking-in-Large-Language-Models-full-paper.pdf) observed this behavior in Claude 3 Opus in their "Alignment Faking in Large Language Models" experiment.\\
+&nbsp;&nbsp;(4) A foundation model that uses [deceptive techniques]{For instance, a model could hide its true desires and motivations from its developers in hopes of protecting those desires from modification. [Greenblatt et al.](https://www.anthropic.com/research/alignment-faking) observed this behavior in Claude 3 Opus in their "Alignment Faking in Large Language Models" experiment.\\
 A model might also intentionally underperform on capabilities tests, either because it was deliberately trained to do so by its developers, or because the model wants to hide its full capabilities from its own developers. This behavior is usually called "sandbagging," and [van der Weij et al.](https://arxiv.org/abs/2406.07358v2) have demonstrated that frontier models were already capable of sophisticated sandbagging in mid-2024.} against the large developer to subvert the controls or monitoring of its large developer outside of the context of an evaluation designed to elicit this behavior.
 
-(d) “[Dangerous capability]{TODO}” means the capacity of a foundation model to do any of the following:
+(d) “[Dangerous capability]{This definition of dangerous capabilities aligns with definitions found in the scientific literature. See, for instance, foundational papers by [Phuong et al.](https://deepmind.google/research/publications/78150/) and [Shevlane et al.](https://www.governance.ai/research-paper/model-evaluation-for-extreme-risks)\\
+The ability to persuade or manipulate humans is also sometimes considered a dangerous model capability. Capabilities (3) and (4) below could implicitly include dangerous persuasion.}” means the capacity of a foundation model to do any of the following:
 
 &nbsp;&nbsp;(1) Provide expert-level assistance in the creation or release of a chemical, biological, radiological, or nuclear weapon.
 
@@ -82,7 +83,7 @@ A model might also intentionally underperform on capabilities tests, either beca
 
 &nbsp;&nbsp;(1) (A) Before January 1, 2027, “large developer” means a person who has trained, or initiated the training of, at least one foundation model using a quantity of computing power greater than 10^26 integer or floating-point operations.
 
-&nbsp;&nbsp;&nbsp;&nbsp;(B) The quantity of computing power described in subparagraph (A) shall include computing for the original training run and any [subsequent fine-tuning, reinforcement learning, or other material modifications]{Fine-tuning and RL are often referred to as "post-training", a catch-all term for the adjustments AI companies make to a model after an initial pre-training run. Post-training already consumes a significant share of a frontier training run's compute budget. [xAI claims](https://www.interconnects.ai/p/grok-4-an-o3-look-alike-in-search) that more than half of the FLOPs used to train Grok 4 were spent on RL. If this is true, Grok 4's post-training compute already surpasses the 10^26 FLOP threshold, even without counting pre-training compute.\\
+&nbsp;&nbsp;&nbsp;&nbsp;(B) The quantity of computing power described in subparagraph (A) shall include computing for the original training run and any [subsequent fine-tuning, reinforcement learning, or other material modifications]{Fine-tuning and RL are often referred to as "post-training", a catch-all for the adjustments AI companies make to a model after an initial pre-training run. Post-training already consumes a significant share of a frontier training run's compute budget. [xAI claims](https://www.interconnects.ai/p/grok-4-an-o3-look-alike-in-search) that more than half of the FLOPs used to train Grok 4 were spent on RL. If this is true, Grok 4's post-training compute already surpasses the 10^26 FLOP threshold, even without counting pre-training compute.\\
 It's expected that future frontier runs will allocate an even larger share of their compute to post-training, as AI companies continue [teaching their models to reason](https://benjamintodd.substack.com/p/teaching-ai-to-reason-this-years) through chain of thought RL.} to a preceding foundation model.
 
 &nbsp;&nbsp;(2) (A) Except as provided in subparagraph (B), on and after January 1, 2027, “large developer” has the meaning defined by a regulation adopted by the Attorney General pursuant to Section 22757.15.
@@ -97,35 +98,37 @@ It's expected that future frontier runs will allocate an even larger share of th
 
 &nbsp;&nbsp;(3) Adaptable to a wide range of distinctive tasks.
 
-(h) “[Model weight]{TODO}” means a numerical parameter in a foundation model that is adjusted through training and that helps determine how inputs are transformed into outputs.
+(h) “[Model weight]{TODO, elaborate for the unfamiliar.}” means a numerical parameter in a foundation model that is adjusted through training and that helps determine how inputs are transformed into outputs.
 
 (i) “Safety and security protocol” means documented technical and organizational protocols to manage, assess, and mitigate catastrophic risks.
 
 ### 22757.12.
 
-(a) A large developer shall write, implement, and clearly and conspicuously publish on its internet website a [safety and security protocol]{TODO} that describes in specific detail all of the following:
+(a) A large developer shall write, implement, and clearly and conspicuously publish on its internet website a [safety and security protocol]{TODO, summarize existing frontier safety policies.} that describes in specific detail all of the following:
 
 &nbsp;&nbsp;(1) How, if at all, the large developer excludes certain foundation models from being covered by its safety and security protocol because those foundation models do not pose material catastrophic risks.
 
-&nbsp;&nbsp;(2) The testing procedures that the large developer uses to assess catastrophic risks from its foundation models, including risk resulting from malfunctions, misuse, and foundation models evading the control of the large developer or user.
+&nbsp;&nbsp;(2) The [testing procedures]{TODO: Who is in compliance?} that the large developer uses to assess catastrophic risks from its foundation models, including risk resulting from malfunctions, misuse, and foundation models evading the control of the large developer or user.
 
 &nbsp;&nbsp;(3) The mitigations that a large developer takes to reduce a catastrophic risk and how the large developer assesses the effectiveness of those mitigations.
 
 &nbsp;&nbsp;(4) The degree to which the large developer’s assessments of catastrophic risk and the effectiveness of catastrophic risk mitigations are reproducible by external entities.
 
-&nbsp;&nbsp;(5) The extent to which, and how, a large developer will use third parties to assess catastrophic risks and the effectiveness of mitigations of catastrophic risk.
+&nbsp;&nbsp;(5) The extent to which, and how, a large developer will [use third parties to assess]{TODO: Who is in compliance?} catastrophic risks and the effectiveness of mitigations of catastrophic risk.
 
-&nbsp;&nbsp;(6) The large developer’s cybersecurity practices and how the large developer secures unreleased model weights from unauthorized modification or transfer by internal or external parties.
+&nbsp;&nbsp;(6) The large developer’s [cybersecurity practices]{TODO: Who is in compliance?} and how the large developer secures unreleased model weights from unauthorized modification or transfer by internal or external parties.
 
 &nbsp;&nbsp;(7) To the extent that the foundation model is controlled by the large developer, the procedures the large developer will use to monitor critical safety incidents and the steps that a large developer would take to respond to a critical safety incident, including, but not limited to, who the large developer will notify and the timeline on which the large developer would take these steps.
 
-&nbsp;&nbsp;(8) The testing procedures that the large developer will use to assess and manage a [catastrophic risk resulting from the internal use]{TODO} of its foundation models, including risks resulting from a foundation model circumventing oversight mechanisms, and the schedule, specified in days, by which the large developer will report these assessments pursuant to subdivision (d).
+&nbsp;&nbsp;(8) The testing procedures that the large developer will use to assess and manage a [catastrophic risk resulting from the internal use]{That is, catastrophic risk resulting from a large developer using a model that has not yet been publicly deployed. Even before deployment, a model is vulnerable to theft by malicious outside actors and to catastrophic misuse by the developer's own staff. More speculatively, if a developer used a powerful misaligned model internally on sensitive engineering tasks, the model might strategically sabotage those tasks, causing a catastrophe at some later point. A misaligned model might also attempt to exfiltrate its own weights from the developer's computers before it is intentionally deployed. (Scientists have [already observed](https://www.anthropic.com/research/alignment-faking) models attempting to self-exfiltrate in controlled evaluations.)\\
+For more analysis of risks from internal use of AI models, see "[AI models can be dangerous before public deployment](https://metr.org/blog/2025-01-17-ai-models-dangerous-before-public-deployment/)" by METR and "[AI Behind Closed Doors](https://www.apolloresearch.ai/research/ai-behind-closed-doors-a-primer-on-the-governance-of-internal-deployment)" by Apollo Research.} of its foundation models, including risks resulting from a foundation model circumventing oversight mechanisms, and the schedule, specified in days, by which the large developer will report these assessments pursuant to subdivision (d).
 
-&nbsp;&nbsp;(9) How the developer determines when its foundation models are substantially modified enough to conduct additional assessments and publish a transparency report pursuant to subdivision (c).
+&nbsp;&nbsp;(9) How the developer determines when its foundation models are substantially [modified enough to conduct additional assessments]{AI developers will often make modifications to an AI system after its initial public deployment. For example, they might revise the [system prompt](https://docs.anthropic.com/en/release-notes/system-prompts), give the base model access to [additional tools](https://openai.com/index/introducing-chatgpt-search/), or raise the amount of compute the model is allowed to spend on [inference](https://www.nvidia.com/en-us/glossary/ai-inference/). All of these post-deployment updates can increase the model's dangerous capabilities or give it new dangerous propensities, potentially invalidating previous safety assessments.} and publish a transparency report pursuant to subdivision (c).
 
 (b) If a large developer makes a material modification to its safety and security protocol, the large developer shall clearly and conspicuously publish the modified protocol and a justification for that modification within 30 days.
 
-(c) Before or concurrently with deploying a new foundation model or a substantially [modified version of an existing foundation model]{TODO}, a large developer shall clearly and conspicuously publish on its internet website a transparency report containing all of the following:
+(c) Before or concurrently with deploying a new foundation model or a substantially [modified version of an existing foundation model]{Subparagraph (a9) above leaves it up to developers to determine when an update to an existing model is substantial enough to require a new transparency report. Measure 7.6 in the EU AI Act's [Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai) also requires large AI developers to update a model report after deployment under certain circumstances.\\
+NOTES, A developer is required to publish an updated report when a serious incident has occured, which I don't think is the case under SB 53.}, a large developer shall clearly and conspicuously publish on its internet website a [transparency report]{TODO, compare with model cards} containing all of the following:
 
 &nbsp;&nbsp;(1) The results of any risk assessment, the steps taken to address any identified risks, and the results of any risk mitigation assessment conducted by the large developer pursuant to its safety and security protocol.
 
@@ -147,7 +150,7 @@ It's expected that future frontier runs will allocate an even larger share of th
 
 ### 22757.13.
 
-(a) The Attorney General shall [establish a mechanism]{TODO} to be used by a large developer or a member of the public to report a critical safety incident that includes all of the following:
+(a) The Attorney General shall [establish a mechanism]{This mechanism could be modeled on the mechanism that the California AG uses to [collect mandatory incident reports](https://oag.ca.gov/privacy/databreach/reporting) from companies that have suffered large data breaches.} to be used by a large developer or a member of the public to report a critical safety incident that includes all of the following:
 
 &nbsp;&nbsp;(1) The date of the critical safety incident.
 
@@ -188,7 +191,10 @@ Section 11546.8 is added to the Government Code, to read:
 
 ### 11546.8. 
 
-(a) There is hereby established within the Government Operations Agency a consortium that shall develop, pursuant to this section, a framework for the creation of a public cloud computing cluster to be known as “CalCompute.”
+(a) There is hereby established within the Government Operations Agency a consortium that shall develop, pursuant to this section, a framework for the creation of a [public cloud computing cluster]{Several other governments have recently established, or are in the process of establishing, public AI compute clusters similar to CalCompute.\\
+In 2023, the United Kingdom announced the [AI Research Resource](https://www.ukri.org/news/300-million-to-launch-first-phase-of-new-ai-research-resource), a £300 million fund to pay for publicly owned AI compute clusters. Two public clusters have been announced so far: [Isambard](https://www.bristol.ac.uk/research/centres/bristol-supercomputing/articles/2025/isambard-ai-is-11th-fastest-supercomputer-in-the-world.html) at the University of Bristol and [Dawn](https://www.hpc.cam.ac.uk/d-w-n) at the University of Cambridge. Isambard came online last month, and the UK's Department of Science, Innovation & Technology [recently announced](https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan) plans to scale up AIRR's clusters by 20x over the next five years.\\
+Earlier this year, the European Union announced [InvestAI](https://digital-strategy.ec.europa.eu/en/news/eu-launches-investai-initiative-mobilise-eu200-billion-investment-artificial-intelligence), a €20 billion fund for building publicly owned AI compute in Europe. The fund aims to build three to five "[AI gigafactories](https://digital-strategy.ec.europa.eu/en/policies/ai-factories)", each containing more than 10^5 H100 equivalents, but none of the gigafactories are online yet.\\
+At the federal level, the National Science Fuondation is leading a [two-year pilot](https://www.nsf.gov/focus-areas/artificial-intelligence/nairr) of the National AI Research Resource, which provides AI cloud compute for US researchers. NAIRR's [stated goals](https://nairrpilot.org/about) are to "spur innovation, develop workforce talent, improve capacity, and advance safe, secure, and trustworthy AI," overlapping strongly with the goals of CalCompute.} to be known as “CalCompute.”
 
 (b) The consortium shall develop a framework for the creation of CalCompute that advances the development and deployment of artificial intelligence that is safe, ethical, equitable, and sustainable by doing, at a minimum, both of the following:
 
@@ -196,7 +202,7 @@ Section 11546.8 is added to the Government Code, to read:
 
 &nbsp;&nbsp;(2) Enabling equitable innovation by expanding access to computational resources.
 
-(c) The consortium shall make reasonable efforts to ensure that CalCompute is established within the University of California to the extent possible.
+(c) The consortium shall make reasonable efforts to ensure that CalCompute is established within the [University of California]{The University of California already operates two clusters with substantial AI-relevant compute: the [National Energy Research Scientific Computing Center](https://www.nersc.gov/) at UC Berkeley, and the [San Diego Supercomputer Center](https://www.sdsc.edu/) at UC San Diego.} to the extent possible.
 
 (d) CalCompute shall include, but not be limited to, all of the following:
 
