@@ -127,8 +127,9 @@ For more analysis of risks from internal use of AI models, see "[AI models can b
 
 (b) If a large developer makes a material modification to its safety and security protocol, the large developer shall clearly and conspicuously publish the modified protocol and a justification for that modification within 30 days.
 
-(c) Before or concurrently with deploying a new foundation model or a substantially [modified version of an existing foundation model]{Subparagraph (a9) above leaves it up to developers to determine when an update to an existing model is substantial enough to require a new transparency report. Measure 7.6 in the EU AI Act's [Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai) also requires large AI developers to update a model report after deployment under certain circumstances.\\
-NOTES, A developer is required to publish an updated report when a serious incident has occured, which I don't think is the case under SB 53.}, a large developer shall clearly and conspicuously publish on its internet website a [transparency report]{TODO, compare with model cards} containing all of the following:
+(c) Before or concurrently with deploying a new foundation model or a substantially [modified version of an existing foundation model]{Subparagraph (a9) above leaves it up to developers to determine when an update to an existing model is substantial enough to require a new transparency report.\\ 
+Measure 7.6 in the EU AI Act's [Code of Practice](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai) requires a large AI developer to update a model report after deployment whenever they "have reasonable grounds to believe that the justification for why the systemic risks stemming from the model are acceptable…has been materially undermined." This requirement could be triggered when a major post-deployment update is made to a model, when the model's "use and/or integrations" change materially, or when a serious incident "involving the model or a similar model" occurs. In general, the EU Code of Practice requires more active updates to transparency reports than SB 53 would require.\\
+OpenAI has already [announced its intention](https://openai.com/global-affairs/eu-code-of-practice/) to sign the AI Act Code of Practice voluntarily.}, a large developer shall clearly and conspicuously publish on its internet website a [transparency report]{TODO, compare with model cards} containing all of the following:
 
 &nbsp;&nbsp;(1) The results of any risk assessment, the steps taken to address any identified risks, and the results of any risk mitigation assessment conducted by the large developer pursuant to its safety and security protocol.
 
@@ -142,7 +143,10 @@ NOTES, A developer is required to publish an updated report when a serious incid
 
 (d) A large developer shall clearly and conspicuously publish on its internet website any assessment of catastrophic risk resulting from internal use of its foundation models pursuant to the schedule the developer specifies in its safety and security protocol.
 
-(e) A large developer shall not make a materially false or misleading statement about catastrophic risk from its foundation models or its management of catastrophic risk.
+(e) A large developer shall not make a [materially false or misleading statement]{Some false or misleading statements about catastrophic risk management might already be penalized under existing law.\\
+California's [Unfair Competition Law](https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?division=7.&chapter=5.&part=2.&lawCode=BPC) already forbids businesses from making "unfair, deceptive, untrue or misleading" claims about their products to consumers. If a large developer makes false or misleading statements to its users about catastrophic risks, it could thus expose itself to civil penalties under UCL. But UCL also has limitations. The fine for making a false or misleading statement is capped at $2,500, an extremely small figure compared to the losses a catastrophic risk would impose on society. And further, only private plaintiffs who have "suffered injury in fact" have standing to sue under UCL. This could make it practically challenging to sue a developer for making false or misleading statements before their model has actually caused a catastrophe.\\
+Federal and state securities fraud laws could also ban certain false or misleading statements by developers. It is illegal under [SEC Rule 10b-5](https://www.govinfo.gov/content/pkg/CFR-2014-title17-vol4/pdf/CFR-2014-title17-vol4-sec240-10b-5.pdf) for a corporation "to make any untrue statement of a material fact or to omit to state a material fact necessary in order to make the statements made…not misleading…in connection with the purchase or sale of any security." Rule 10b-5 could be used against developers who make false or misleading claims to investors about their catastrophic risk management. But this legal strategy relies on an untested interpretation of materiality, and it would only apply to public companies or companies actively engaged in selling securities.\\
+Overall, it seems likely that paragraph (e) would expand large developers' legal liability for false or misleading safety claims.} about catastrophic risk from its foundation models or its management of catastrophic risk.
 
 (f) (1) When a large developer publishes documents to comply with this section, the large developer may make redactions to those documents that are necessary to protect the large developer’s trade secrets, the large developer’s cybersecurity, public safety, or the national security of the United States or to comply with any federal or state law.
 
@@ -164,7 +168,7 @@ NOTES, A developer is required to publish an updated report when a serious incid
 
 ### 22757.14.
 
-(a) A violation of this chapter shall be subject to a civil penalty in an amount not to exceed  dollars ($) per violation, unless the violation is willful or reckless, in which case the civil penalty shall be in an amount not to exceed  dollars ($).
+(a) A violation of this chapter shall be subject to a civil penalty in an amount not to exceed [dollars ($)]{The amended bill text released on 8 July does not specify a dollar figure.} per violation, unless the violation is willful or reckless, in which case the civil penalty shall be in an amount not to exceed  dollars ($).
 
 (b) The civil penalty shall be assessed in a civil action brought only by the Attorney General.
 
