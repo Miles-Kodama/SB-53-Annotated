@@ -349,11 +349,94 @@ def generate_html(parsed_data):
             display: inline-block;
             position: relative;
         }}
+
+        /* Byline styles */
+        .byline {{
+            text-align: center;
+            margin: -1rem 0 2rem 0;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }}
+        
+        .byline-expanded {{
+            display: inline-block;
+            position: relative;
+        }}
+        
+        .byline-expanded .details {{
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 0.2rem;
+            padding: 1rem;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s;
+            z-index: 10;
+            font-style: normal;
+            text-align: left;
+            line-height: 1.4;
+        }}
+        
+        .byline-expanded:hover .details {{
+            opacity: 1;
+            visibility: visible;
+        }}
+
+        /* This creates the invisible bridge */
+        .byline-expanded::before {{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 20px;
+            z-index: 9;
+        }}
+
+        /* And these transition delays help with timing */
+        .byline-expanded .details {{
+            transition-delay: 0.3s;  /* Delay before hiding */
+        }}
+
+        .byline-expanded:hover .details {{
+            transition-delay: 0s;  /* No delay when showing */
+        }}
+        
+        .byline-link {{
+            color: #666;
+            text-decoration: none;
+            border-bottom: 1px dotted #999;
+            cursor: pointer;
+        }}
+        
+        .byline-link:hover {{
+            color: #1976d2;
+            border-bottom-color: #1976d2;
+        }}
     </style>
 </head>
 <body>
     <div class="container">
         <h1>{title}</h1>
+        
+        <div class="byline">
+            <span class="byline-expanded">
+                annotated by <span class="byline-link">Miles Kodama</span>
+                <div class="details">
+                    I'm <a href="https://www.mkodama.org">Miles</a>, I research AI policy as a summer fellow at <a href="https://www.governance.ai/">GovAI</a>, and I created this site to help the public understand SB 53.<br><br>
+                    If you find an error or have a suggestion, you can <a href="mailto:milesmkodama@gmail.com">send me an email</a> or message me on Signal @mileskodama.21
+                </div>
+            </span>
+        </div>
         
         {instructions_html}
         
