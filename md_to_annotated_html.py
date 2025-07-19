@@ -400,11 +400,21 @@ def generate_html(parsed_data):
         }});
         
         // Click anywhere else to close annotations
-        document.addEventListener('click', function() {{
-            document.querySelectorAll('.annotation-content.show').forEach(annotation => {{
-                annotation.classList.remove('show');
-                const trigger = document.querySelector('[data-annotation-id="' + annotation.id + '"]');
-                if (trigger) trigger.classList.remove('expanded');
+        document.addEventListener('click', function(e) {{
+            // Only close annotations if the click is not on an annotation content or annotated text
+            if (!e.target.closest('.annotation-content') && !e.target.closest('.annotated')) {{
+                document.querySelectorAll('.annotation-content.show').forEach(annotation => {{
+                    annotation.classList.remove('show');
+                    const trigger = document.querySelector('[data-annotation-id="' + annotation.id + '"]');
+                    if (trigger) trigger.classList.remove('expanded');
+                }});
+            }}
+        }});
+        
+        // Add event listeners to prevent clicks inside annotations from bubbling up
+        document.querySelectorAll('.annotation-content').forEach(annotation => {{
+            annotation.addEventListener('click', function(e) {{
+                e.stopPropagation();
             }});
         }});
     </script>
