@@ -432,7 +432,7 @@ def generate_html(parsed_data):
             <span class="byline-expanded">
                 annotated by <span class="byline-link">Miles Kodama</span>
                 <div class="details">
-                    I'm <a href="https://www.mkodama.org">Miles</a>, I research AI policy as a summer fellow at <a href="https://www.governance.ai/">GovAI</a>, and I created this site to help the public understand SB 53.<br><br>
+                    I'm <a href="https://www.mkodama.org">Miles</a>, I research AI policy, and I created this site to help the public understand SB 53.<br><br>
                     If you find an error or have a suggestion, you can <a href="mailto:milesmkodama@gmail.com">send me an email</a> or message me on Signal @mileskodama.21
                 </div>
             </span>
