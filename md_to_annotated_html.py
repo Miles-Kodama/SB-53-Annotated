@@ -582,7 +582,7 @@ def generate_html(parsed_data):
         '''
         
         instructions_html = f'''<div class="instructions">
-            <p style="text-align: center; margin: 0 0 1rem 0;">{parsed_data["instructions"]}</p>
+            <p style="text-align: left; margin: 0 0 1rem 0;">{parsed_data["instructions"]}</p>
             {summary_details}
         </div>'''
 
