@@ -219,6 +219,7 @@ def generate_html(parsed_data):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <link rel="icon" type="image/png" href="/53favicon.png">
     <style>
         body {{
             font-family: Georgia, serif;
