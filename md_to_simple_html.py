@@ -315,9 +315,9 @@ def generate_html(parsed_data):
 <body>
     <div class="container">
         <nav class="nav-bar">
-            <a href="index.html" class="nav-link back">← Back to Bill Text</a>
-            <a href="summary.html" class="nav-link">Summary</a>
-            <a href="faq.html" class="nav-link">FAQs</a>
+            <a href="index" class="nav-link back">← Back to Bill Text</a>
+            <a href="summary" class="nav-link">Summary</a>
+            <a href="faq" class="nav-link">FAQs</a>
         </nav>
         
         <h1>{title}</h1>
