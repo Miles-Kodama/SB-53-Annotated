@@ -4,7 +4,7 @@ On a high level, SB 53 says seven things. These are the four I consider most imp
 - Every year starting in 2030, a large AI developer must get an independent auditor to verify that (1) they are following their own safety policy, and (2) the safety policy is clear enough that it's possible to determine whether the developer is following it (§ 22757.14).
 - Every frontier model released by a large AI developer must have a published model card (§ 22757.12.c)
 - A large AI developer is civilly liable if they break any of these rules (§ 22757.16). 
-- 
+
 And these are the three major provisions that I expect will be less important:
 - The California Attorney General will operate an incident reporting system for critical incidents involving AI (§ 22757.13).
 - Whistleblower protections for large AI developers' employees and external partners are expanded (§ 1107).
