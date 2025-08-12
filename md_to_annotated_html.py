@@ -498,6 +498,16 @@ def generate_html(parsed_data):
             color: #5a3600;
             border-color: rgba(133, 100, 4, 0.3);
         }}
+
+        .copyright {{
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+            line-height: 1.4;
+        }}
     </style>
 </head>
 <body>
@@ -517,6 +527,12 @@ def generate_html(parsed_data):
         {instructions_html}
         
         {sections_html}
+
+        <div class="copyright">
+            © 2025 Miles Kodama.<br>
+            Content: All rights reserved.<br>
+            Design & Code: Licensed under MIT License.
+        </div>
     </div>
     
     <script>
