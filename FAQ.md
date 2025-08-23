@@ -66,7 +66,7 @@ The [AI Act](https://artificialintelligenceact.eu/) is an EU regulation that set
 But SB 53 goes beyond the EU AI Act in three important ways
 1. The AI Act does not mandate *public* transparency from large developers. The Code of Practice lets companies keep their full safety frameworks private, sending them only to the EU AI Office. Complete model reports likewise go just to the AI Office, not to consumers using the model. Under the Code of Practice, companies only publish summarized versions of these documents "if and insofar as is necessary." In contrast, SB 53 requires a large developer to post their safety policy and model cards prominently on their website for all to read.
 2. The AI Act does nothing for the State of California's awareness of critical safety incidents. It requires an AI company to notify the EU AI Office and their *national* government of any serious incidents caused by their models, but it says nothing about notifying regional governments. Under SB 53, a large developer will also be required to inform the California Attorney General when they become aware of a critical incident involving their models.
-3. The AI Act does not require AI companies to get audited for compliance with their own safety policies. SB 53 will require them to do so. 
+3. The AI Act does not require AI companies to get externally audited for compliance with their own safety policies. The EU AI Office can launch requests for information and enforcement actions against a company suspected of breaking their safety policy, but these mechanisms may not provide as much accountability as SB 53's auditing requirement.
 
 ## How does SB 53 balance transparency with security and competitive concerns?
 
