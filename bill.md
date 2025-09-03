@@ -1,5 +1,5 @@
 # California Senate Bill 53
-This site presents the text of Senate Bill 53 enriched with background and commentary. Click on any of the blue highlights to learn more. The bill text below was last amended on 17 July, 2025.
+This site presents the text of Senate Bill 53 enriched with background and commentary. Click on any of the blue highlights to learn more. The bill text below was last amended on 2 September, 2025.
 
 ## SECTION 1.
 The Legislature finds and declares all of the following:
@@ -116,7 +116,7 @@ President Biden's [Executive Order 14110](https://www.govinfo.gov/content/pkg/FR
 &nbsp;&nbsp;&nbsp;&nbsp; (II) The quantity of computing power described in subparagraph (A) subclause (I) shall include computing for the original training run and any [subsequent fine-tuning, reinforcement learning, or other material modifications]{Fine-tuning and RL are often referred to as "post-training", a catch-all for the adjustments AI companies make to a model after an initial pre-training run. Post-training already consumes a significant share of a frontier training run's compute budget. [xAI claims](https://www.interconnects.ai/p/grok-4-an-o3-look-alike-in-search) that over half of the FLOPs used to train Grok 4 were spent on RL. If this is true, Grok 4's post-training compute already surpasses the 10^26 FLOP threshold, even without counting pre-training compute.\\
 It's expected that future frontier runs will allocate an even larger share of their compute to post-training, as AI companies continue [teaching their models to reason](https://benjamintodd.substack.com/p/teaching-ai-to-reason-this-years) through chain of thought RL.} to a preceding foundation model.
 
-&nbsp;&nbsp;&nbsp;&nbsp;(ii) The person had annual gross revenues in excess of [one hundred million dollars]{Both of the AI developers known to have trained a model with over 10^26 FLOPs also meet this criterion. [xAI](https://www.forbes.com/sites/antoniopequenoiv/2024/12/06/what-we-know-about-xai-as-it-bolsters-itself-for-ai-race-with-6-billion-in-new-funding/) reached $100 million annualized revenue in 2024, and [OpenAI](https://www.wsj.com/tech/ai/openaiin-talks-for-huge-investment-round-valuing-it-up-to-300-billion-2a2d4327)'s revenue in 2024 is estimated to have been $3.7 billion. Other leading AI developers who could plausibly soon train a model with over 10^26 FLOPs—such as [Anthropic](https://www.reuters.com/business/anthropic-hits-3-billion-annualized-revenue-business-demand-ai-2025-05-30/), [Google](https://abc.xyz/assets/a3/91/6d1950c148fa84c7d699abe05284/2024q4-alphabet-earnings-release.pdf), and [Meta](https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Reports-Fourth-Quarter-and-Full-Year-2024-Results/)—also exceed $100 million in annual revenue.} ($100,000,000) in the preceding calendar year.
+&nbsp;&nbsp;&nbsp;&nbsp;(ii) The person had annual gross revenues in excess of [five hundred million dollars]{Both of the AI developers known to have trained a model with over 10^26 FLOPs also meet this criterion. [xAI](https://www.forbes.com/sites/antoniopequenoiv/2024/12/06/what-we-know-about-xai-as-it-bolsters-itself-for-ai-race-with-6-billion-in-new-funding/) reached $100 million annualized revenue in 2024, and [analysts expect](https://www.bloomberg.com/news/articles/2025-06-17/musk-s-xai-burning-through-1-billion-a-month-as-costs-pile-up) it to break $500 million this year.  [OpenAI](https://www.wsj.com/tech/ai/openaiin-talks-for-huge-investment-round-valuing-it-up-to-300-billion-2a2d4327)'s revenue in 2024 is estimated to have been $3.7 billion. Other leading AI developers who could plausibly soon train a model with over 10^26 FLOPs—such as [Anthropic](https://www.reuters.com/business/anthropic-hits-3-billion-annualized-revenue-business-demand-ai-2025-05-30/), [Google](https://abc.xyz/assets/a3/91/6d1950c148fa84c7d699abe05284/2024q4-alphabet-earnings-release.pdf), and [Meta](https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Reports-Fourth-Quarter-and-Full-Year-2024-Results/)—also exceed $500 million in annual revenue.} ($500,000,000) in the preceding calendar year.
 
 &nbsp;&nbsp;(2) (A) Except as provided in subparagraph (B), on and after January 1, 2027, “large developer” has the meaning defined by a regulation adopted by the Attorney General pursuant to Section 22757.15.
 
@@ -241,37 +241,17 @@ This provision accounts for those concerns by allowing AI developers to redact t
 
 (c) The Attorney General shall review critical safety incident reports submitted by large developers and may review reports submitted by members of the public.
 
-(d) The Attorney General may transmit reports of critical safety incidents, reports from employees made pursuant to Chapter 5.1 (commencing with Section 1107) of Part 3 of Division 2 of the Labor Code, and summaries of auditor reports required by Section 22757.14 to the Legislature, the Governor, the federal government, or appropriate state agencies.
+(d) The Attorney General may transmit reports of critical safety incidents and reports from employees made pursuant to Chapter 5.1 (commencing with Section 1107) of Part 3 of Division 2 of the Labor Code to the Legislature, the Governor, the federal government, or appropriate state agencies.
 
-(e) A report of a critical safety incident submitted to the Attorney General pursuant to this section, a employee report made pursuant to Chapter 5.1 (commencing with Section 1107) of Part 3 of Division 2 of the Labor Code, and a summary of an auditors report required by Section 22757.14 are exempt from the California Public Records Act (Division 10 (commencing with Section 7920.000) of Title 1 of the Government Code).
+(e) A report of a critical safety incident submitted to the Attorney General pursuant to this section and a employee report made pursuant to Chapter 5.1 (commencing with Section 1107) of Part 3 of Division 2 of the Labor Code are exempt from the California Public Records Act (Division 10 (commencing with Section 7920.000) of Title 1 of the Government Code).
 
-(f) (1) Beginning January 1, 2027, and annually thereafter, the Attorney General shall produce a report with anonymized and aggregated information about critical safety incidents, reports from employees made pursuant to Chapter 5.1 (commencing with Section 1107) of Part 3 of Division 2 of the Labor Code, and summaries of auditors reports required by Section 22757.14 that have been reviewed by the Attorney General since the preceding report.
+(f) (1) Beginning January 1, 2027, and annually thereafter, the Attorney General shall produce a report with anonymized and aggregated information about critical safety incidents and reports from employees made pursuant to Chapter 5.1 (commencing with Section 1107) of Part 3 of Division 2 of the Labor Code that have been reviewed by the Attorney General since the preceding report.
 
 &nbsp;&nbsp;(2) The Attorney General shall not include information in a report pursuant to this subdivision that would compromise the trade secrets or cybersecurity of a large developer, public safety, or the national security of the United States or that would be prohibited by any federal or state law.
 
 &nbsp;&nbsp;(3) The Attorney General shall transmit a report pursuant to this subdivision to the Legislature, pursuant to Section 9795, and to the Governor.
 
 ### 22757.14.
-
-(a) [Beginning January 1, 2030]{If SB 53 were to pass, the independent auditing requirements would kick in only after a roughly four year grace period. The Assembly committee that added this provision to SB 53 said the purpose of the grace period is "to give time for the nascent industry of AI auditors to grow."}, and at least annually thereafter, a large developer shall [retain an independent third-party auditor to produce a report]{New York's proposed [RAISE Act](https://www.nysenate.gov/legislation/bills/2025/A6453/amendment/A) (§1421.4) would also require every large AI developer to commission an annual audit of the developer's compliance with their own safety and security protocol.\\
-There is precedent for this provision in the aviation and nuclear industries. Under Part 121 of the [Federal Aviation Regulation](https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-121?toc=1), every airline in the US must write and implement a Safety Management System, a document laying out the airline's safety objectives and the measures it will take to achieve them. The airline must also commission regular independent audits to confirm that they are complying with their own Safety Management System.\\
-The Nuclear Regulatory Commission requires every nuclear power plant operator to write a Quality Assurance Plan describing how they will ensure adherence to safety regulations. [CFR Title 10](https://www.nrc.gov/reading-rm/doc-collections/cfr/part050/part050-appb.html) says that the operator must also commission periodic audits to verify that they are in compliance with their quality assurance protocols.} assessing both of the following:
-
-&nbsp;&nbsp;(1) Whether the large developer has substantially complied with its safety and security protocol and any instances of substantial noncompliance during the prior year.
-
-&nbsp;&nbsp;(2) Any instances in which the large developers safety and security protocol has not been stated clearly enough to determine whether the large developer has complied.
-
-(b) A large developer shall allow the third-party auditor access to all materials produced to comply with this chapter and any other materials reasonably necessary to perform the assessment required by this section.
-
-(c) A large developer shall retain a report required by this section for five years.
-
-(d) In conducting an audit for a large developer pursuant to this section, an auditor shall employ or contract one or more individuals with expertise in corporate compliance and one or more individuals with technical expertise in the safety of foundation models.
-
-(e) Within 30 days after completing an audit, the auditor shall transmit to the Attorney General a high-level summary of the report required by this section that fairly presents, in all material respects, the outcome of the audit.
-
-(f) An auditor shall not knowingly include a material misrepresentation or omit a material fact in a summary or report produced pursuant to this section
-
-### 22757.15.
 
 (a) On or before January 1, 2027, and annually thereafter, the Attorney General may adopt regulations to [update the definition of a “large developer”]{This allows the California Attorney General to adjust the training compute threshold for a person to count as a large developer upward or downward, or to replace it with a different kind of threshold altogether. For example, the compute threshold could be replaced with a cost threshold like the threshold used in New York's proposed [RAISE Act](https://www.nysenate.gov/legislation/bills/2025/A6453/amendment/A).} for the purposes of this chapter to ensure that it accurately reflects technological developments, scientific literature, and widely accepted national and international standards and [applies to well-resourced large developers at the frontier]{This paragraph allows the California Attorney General to redefine "large developer" at their own discretion to ensure that all well-resourced developers at the frontier of AI are covered. It does *not* allow the AG to redefine "large developer" in a way that would cover less well-resourced or behind-the-frontier developers. According to paragraph (c), the legislature would have to approve any proposed redefinition of "large developer" that covers startups or other small developers.} of artificial intelligence development.
 
@@ -289,7 +269,7 @@ The Nuclear Regulatory Commission requires every nuclear power plant operator to
 
 (c) If the Attorney General determines that less well-resourced developers, or developers significantly behind the frontier of artificial intelligence, may create substantial catastrophic risk, the Attorney General shall promptly submit a report to the Legislature, pursuant to Section 9795, with a proposal for managing this source of catastrophic risk but [shall not include those developers]{This protects small developers from possible regulatory overreach. It says that Attorney General cannot redefine "large developer" to include behind-the-frontier developers unless the California Legislature and the Governor both approve.} within the definition of “large developer” without authorization in subsequently enacted legislation.
 
-### 22757.16.
+### 22757.15.
 (a) A large developer who violates this chapter shall be [subject to a civil penalty]{Importantly, this provision only makes large AI developers liable for transparency violations, not for harms caused by their models. A large developer can be sued for procedural failures—such as neglecting to publish a safety policy, breaking their own safety policy, or publishing a false or misleading model card. But as long as an AI developer is being transparent, if something goes wrong and one of their systems causes a catastrophe, the developer cannot be sued under SB 53. They are no more liable than they would be under existing law.} subject to all of the following:
 
 &nbsp;&nbsp;(1) (A) For an unknowing violation that does not create a material risk of death, serious physical injury, or a catastrophic risk, a large developer shall be subject to a civil penalty in an amount not to exceed ten thousand dollars ($10,000).
@@ -302,9 +282,7 @@ The Nuclear Regulatory Commission requires every nuclear power plant operator to
 
 &nbsp;&nbsp;(3) For a knowing violation that creates a material risk of death, serious physical injury, or a catastrophic risk, a large developer shall be subject to a civil penalty in an amount not to exceed one million dollars ($1,000,000) for a violation that is the large developers first such violation and in an amount not exceeding ten million dollars ($10,000,000) for any subsequent violation.
 
-(b) A violation of this chapter by an auditor shall be subject to a civil penalty in an amount not to exceed ten thousand dollars ($10,000).
-
-(c) A civil penalty described in this section shall be recovered in a civil action [brought only by the Attorney General]{This means that private actors do _not_ have standing to sue a large developer for breaking transparency rules under SB 53. Only the California AG can bring suit.}.
+(b) A civil penalty described in this section shall be recovered in a civil action [brought only by the Attorney General]{This means that private actors do _not_ have standing to sue a large developer for breaking transparency rules under SB 53. Only the California AG can bring suit.}.
 
 ## SECTION 3.
 Section 11546.8 is added to the Government Code, to read:
@@ -466,4 +444,4 @@ The [AI Whistleblower Protection Act](https://www.grassley.senate.gov/imo/media/
 ## SECTION 6.
 The Legislature finds and declares that Section 2 of this act, which adds Chapter 25.1 (commencing with Section 22757.10) to Division 8 of the Business and Professions Code, imposes a limitation on the public's right of access to the meetings of public bodies or the writings of public officials and agencies within the meaning of Section 3 of Article I of the California Constitution. Pursuant to that constitutional provision, the Legislature makes the following findings to demonstrate the interest protected by this limitation and the need for protecting that interest:
 
-Information in critical safety incident reports, summaries of auditors reports, and reports from employees may contain information that could threaten public safety or compromise the response to an incident if disclosed to the public.
+Information in critical safety incident reports and reports from employees may contain information that could threaten public safety or compromise the response to an incident if disclosed to the public.
