@@ -1,2 +1,2 @@
 # SB-53-Annotated
-An annotated guide to California's senate bill 53
+The script `md_to_annotated_html.py` converts a markdown file of an annotated legislative bill to HTML with highlights that you can click to expand. `md_to_simple_html.py` converts a markdown file of article (ie, the FAQ or summary) to a page on the website
