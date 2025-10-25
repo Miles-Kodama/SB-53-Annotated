@@ -71,7 +71,7 @@ As the [California Report](https://www.cafrontieraigov.org/) notes, making AI co
 SB 53 accounts for these concerns by allowing AI developers to redact their safety policies and model cards as needed "to protect the large developer’s trade secrets, the large developer’s cybersecurity, public safety, or the national security of the United States." These redactions are entirely up to the developer's discretion, so long as they explain in general terms what they redacted and why and retain an unredacted copy of the document for five years. 
 
 [^1]: See § 3 in Heim and Koessler "Training Compute Thresholds." Their precise estimate is that a 10^26 FLOP training run would have cost $70 million in mid 2024.
-[^2]: In fact, the rules apply to a large developer even if they do not deploy their models at all. In principle, a company could initiate a 10^26 FLOP training run and make $100 million of annual revenue without deploying a single model, and they would count as a large developer. 
+[^2]: In fact, the rules apply to a frontier developer even if they do not deploy their models at all. In principle, a company could initiate a 10^26 FLOP training run and make $500 million of annual revenue without deploying a single model, and they would count as a large frontier developer. 
 [^3]: For the precise scope of the incident reporting requirement, see § 22757.13.c.
 [^4]: See § 3 of the Report and § 22757.12.a of SB 53.
 [^5]: See § 4 in the Report. 
